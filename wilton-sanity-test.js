@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-require(["moment", "assert"], function(moment, assert) {
+define(["moment", "assert"], function(moment, assert) {
     var date = moment("2010-10-20 4:30", "YYYY-MM-DD HH:mm");
     var str = date.format("YYYY-MM-DD_HH:mm:ss");
     console.log("test: moment sanity");
