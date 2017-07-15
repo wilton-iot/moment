@@ -95,5 +95,26 @@
         "output": [
             "locale/*.js"
         ]
-    }
+    },
+  "wilton": {
+    "excludes": [
+      "benchmarks",
+      "meteor",
+      "min",
+      "scripts",
+      "src",
+      "tasks",
+      "templates",
+      "typing-tests",
+      "Gruntfile.js",
+      "Moment.js.nuspec",
+      "bower.json",
+      "component,json",
+      "composer,json",
+      "ender,json",
+      "moment.d.ts",
+      "package.js",
+      "wilton-sanity-test.js"
+    ]
+  }
 }
