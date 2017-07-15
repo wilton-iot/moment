@@ -9,4 +9,9 @@ define(["moment", "assert"], function(moment, assert) {
     var str = date.format("YYYY-MM-DD_HH:mm:ss");
     console.log("test: moment sanity");
     assert.equal(str, "2010-10-20_04:30:00");
+    
+    return {
+        main: function() {
+        }
+    };
 });
