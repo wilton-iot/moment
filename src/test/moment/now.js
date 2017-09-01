@@ -1,5 +1,6 @@
-import { module, test, expect } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('now');
 
@@ -80,3 +81,5 @@ test('empty object, empty array', function (assert) {
         return moment.utc({});
     }, 'moment.utc({})');
 });
+
+return module.exports;});

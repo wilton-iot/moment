@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import isNumber from '../../lib/utils/is-number.js';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var isNumber = require("lodash/isNumber");
 
 
 test('isNumber recognizes numbers', function (assert) {
@@ -26,3 +27,5 @@ test('isNumber rejects non-numbers', function (assert) {
     assert.ok(!isNumber(new Date()), 'date');
     assert.ok(!isNumber({a:1,b:2}), 'object');
 });
+
+return module.exports;});

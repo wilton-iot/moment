@@ -1,6 +1,7 @@
-import { module, test } from '../qunit';
-import each from '../helpers/each';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var each = require("lodash/each");
+var moment = require("moment");
 
 module('format');
 
@@ -503,3 +504,5 @@ test('Y token', function (assert) {
     assert.equal(moment('9999-01-01', 'Y-MM-DD', true).format('Y'), '9999', 'format 9999 with Y');
     assert.equal(moment('10000-01-01', 'Y-MM-DD', true).format('Y'), '+10000', 'format 10000 with Y');
 });
+
+return module.exports;});

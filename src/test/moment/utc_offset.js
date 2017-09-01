@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('utc offset');
 
@@ -482,3 +483,5 @@ test('timezone format', function (assert) {
     assert.equal(moment().utcOffset(-90).format('ZZ'), '-0130', '+90 -> -0130');
     assert.equal(moment().utcOffset(-120).format('ZZ'), '-0200', '+120 -> -0200');
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('locale update');
 
@@ -164,3 +165,5 @@ test('months', function (assert) {
     });
     assert.ok(moment.utc('2015-01-01', 'YYYY-MM-DD').format('MMMM'), 'First', 'months uses child');
 });
+
+return module.exports;});

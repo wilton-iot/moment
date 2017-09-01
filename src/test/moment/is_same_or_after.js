@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('is same or after');
 
@@ -180,3 +181,5 @@ test('is same or after with invalid moments', function (assert) {
     assert.equal(m.isSameOrAfter(invalid, 'second'), false, 'invalid moment second');
     assert.equal(m.isSameOrAfter(invalid, 'milliseconds'), false, 'invalid moment milliseconds');
 });
+
+return module.exports;});

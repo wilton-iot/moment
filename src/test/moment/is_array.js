@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import isArray from '../../lib/utils/is-array.js';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var isArray = require("lodash/isArray");
 
 
 test('isArray recognizes Array objects', function (assert) {
@@ -17,3 +18,5 @@ test('isArray rejects non-Array objects', function (assert) {
     assert.ok(!isArray(new Date()), 'date');
     assert.ok(!isArray({a:1,b:2}), 'object');
 });
+
+return module.exports;});

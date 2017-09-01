@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 function equal(assert, a, b, message) {
     assert.ok(Math.abs(a - b) < 0.00000001, '(' + a + ' === ' + b + ') ' + message);
@@ -245,3 +246,5 @@ test('negative zero', function (assert) {
     assert.ok(!isNegative(moment([2012, 0, 1]).diff(moment([2012, 0, 1, 0, 0, 1]), 'minutes')), 'minute diff on same minute is zero, not -0');
     assert.ok(!isNegative(moment([2012, 0, 1]).diff(moment([2012, 0, 1, 0, 0, 0, 1]), 'seconds')), 'second diff on same second is zero, not -0');
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('duration');
 
@@ -684,3 +685,5 @@ test('duration plugins', function (assert) {
     };
     durationObject.foo(5);
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('is between');
 
@@ -355,3 +356,5 @@ test('is between millisecond', function (assert) {
     assert.equal(m.isBetween(m, 'millisecond'), false, 'same moments are not between the same millisecond');
     assert.equal(+m, +mCopy, 'isBetween millisecond should not change moment');
 });
+
+return module.exports;});

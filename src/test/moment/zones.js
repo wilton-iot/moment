@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('zones', {
     'setup': function () {
@@ -499,3 +500,5 @@ test('parse zone with a minutes unit abs less than 16 should retain minutes', fu
     assert.equal(o.zone(), -15);
     assert.equal(o.hour(), 0);
 });
+
+return module.exports;});

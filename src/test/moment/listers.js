@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('listers');
 
@@ -121,3 +122,5 @@ test('with locale data', function (assert) {
     assert.deepEqual(customLocale.weekdaysShort(), weekdaysShort);
     assert.deepEqual(customLocale.weekdaysMin(), weekdaysMin);
 });
+
+return module.exports;});

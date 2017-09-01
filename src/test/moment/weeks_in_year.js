@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('weeks in year');
 
@@ -85,3 +86,5 @@ test('weeksInYear doy/dow = 0/6', function (assert) {
     assert.equal(moment([2014]).weeksInYear(), 52, '2014 has 52 weeks');
     assert.equal(moment([2015]).weeksInYear(), 52, '2015 has 53 weeks');
 });
+
+return module.exports;});

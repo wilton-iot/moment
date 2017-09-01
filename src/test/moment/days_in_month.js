@@ -1,6 +1,7 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
-import each from '../helpers/each';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
+var each = require("lodash/each");
 
 module('days in month');
 
@@ -19,3 +20,5 @@ test('days in month leap years', function (assert) {
     assert.equal(moment([2008, 1]).daysInMonth(), 29, 'Feb 2008 should have 29 days');
     assert.equal(moment([2000, 1]).daysInMonth(), 29, 'Feb 2000 should have 29 days');
 });
+
+return module.exports;});

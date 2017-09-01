@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('instanceof');
 
@@ -26,3 +27,5 @@ test('instanceof', function (assert) {
     assert.equal(null instanceof moment, false, 'null is not moment object');
     assert.equal(undefined instanceof moment, false, 'undefined is not moment object');
 });
+
+return module.exports;});

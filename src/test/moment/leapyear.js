@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('leap year');
 
@@ -9,3 +10,5 @@ test('leap year', function (assert) {
     assert.equal(moment([2008, 0, 1]).isLeapYear(), true, '2008');
     assert.equal(moment([2000, 0, 1]).isLeapYear(), true, '2000');
 });
+
+return module.exports;});

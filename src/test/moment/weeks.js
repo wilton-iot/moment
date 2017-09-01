@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('weeks');
 
@@ -222,3 +223,5 @@ test('count years with iso week 53', function (assert) {
     }
     assert.equal(count, 71, 'Should have 71 years in 400-year cycle with iso week 53');
 });
+
+return module.exports;});

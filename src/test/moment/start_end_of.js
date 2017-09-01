@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('start and end of units');
 
@@ -393,3 +394,5 @@ test('endOf millisecond and no-arg', function (assert) {
     assert.equal(+m, +m.clone().endOf('millisecond'), 'endOf with millisecond argument should change time');
     assert.equal(+m, +m.clone().endOf('milliseconds'), 'endOf with milliseconds argument should change time');
 });
+
+return module.exports;});

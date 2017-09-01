@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('is valid');
 
@@ -275,3 +276,5 @@ test('0 hour is invalid in strict', function (assert) {
     assert.equal(moment('0:01', 'h:mm', true).isValid(), false, '0 hour is invalid in strict');
     assert.equal(moment('0:01', 'h:mm').isValid(), true, '0 hour is valid in normal');
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('parsing flags');
 
@@ -166,3 +167,5 @@ test('empty format array', function (assert) {
     assert.equal(flags('1982 May', ['YYYY MMM']).invalidFormat, false, 'empty format array');
     assert.equal(flags('1982 May', []).invalidFormat, true, 'empty format array');
 });
+
+return module.exports;});

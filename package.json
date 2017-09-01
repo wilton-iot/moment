@@ -113,8 +113,7 @@
       "composer,json",
       "ender,json",
       "moment.d.ts",
-      "package.js",
-      "wilton-sanity-test.js"
+      "package.js"
     ]
   }
 }

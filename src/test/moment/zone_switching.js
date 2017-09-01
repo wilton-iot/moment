@@ -1,6 +1,9 @@
-import { module, test, expect } from '../qunit';
-import moment from '../../moment';
-import { isNearSpringDST } from '../helpers/dst';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat"); var module = test.QUnit.module;
+var moment = require("moment");
+function isNearSpringDST() {
+    return moment().subtract(1, 'day').utcOffset() !== moment().add(1, 'day').utcOffset();
+}
 
 module('zone switching');
 
@@ -107,3 +110,5 @@ test('zone to local, keepLocalTime = false', function (assert) {
                 'zone(' + z + ':00) to local failed to keep utc time (implicit)');
     }
 });
+
+return module.exports;});

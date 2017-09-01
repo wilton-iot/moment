@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('week day');
 
@@ -149,3 +150,5 @@ test('weekday first day of week Saturday (dow 6)', function (assert) {
     assert.equal(moment([2001, 4, 17]).weekday(), 5, 'May 17 2001 is Thursday  -- 5th day');
     assert.equal(moment([2000, 0,  7]).weekday(), 6, 'Jan  7 2000 is Friday    -- 6th day');
 });
+
+return module.exports;});

@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('quarter');
 
@@ -99,3 +100,5 @@ test('quarter setter bubble to previous year', function (assert) {
     assert.equal(m.second(), 3, 'keep seconds');
     assert.equal(m.millisecond(), 4, 'keep milliseconds');
 });
+
+return module.exports;});

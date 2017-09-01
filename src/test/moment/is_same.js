@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('is same');
 
@@ -149,3 +150,5 @@ test('is same with utc offset moments', function (assert) {
 test('is same with invalid moments', function (assert) {
     assert.equal(moment.invalid().isSame(moment.invalid()), false, 'invalid moments are not considered equal');
 });
+
+return module.exports;});

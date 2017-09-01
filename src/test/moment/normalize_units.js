@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('normalize units');
 
@@ -29,3 +30,5 @@ test('normalize units', function (assert) {
         assert.equal(moment.normalizeUnits(alias), fullKey, 'Testing alias ' + fullKey);
     }
 });
+
+return module.exports;});

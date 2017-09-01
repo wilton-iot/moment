@@ -1,5 +1,6 @@
-import { module, test } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var moment = require("moment");
 
 module('getters and setters');
 
@@ -339,3 +340,5 @@ test('setters across DST -1', function (assert) {
 
     moment.updateOffset = oldUpdateOffset;
 });
+
+return module.exports;});

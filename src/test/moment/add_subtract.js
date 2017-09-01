@@ -1,5 +1,7 @@
-import { module, test, expect } from '../qunit';
-import moment from '../../moment';
+define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+var test = require("tape-compat");var module = test.QUnit.module;
+var expect = test.expect;
+var moment = require("moment");
 
 module('add and subtract');
 
@@ -368,3 +370,5 @@ test('add decimal values of days and months', function (assert) {
     assert.equal(moment([2016, 0,1]).add(1.6, 'years').format('YYYY-MM-DD'), '2017-08-01', 'add 1.6 years becomes 1.6*12 = 19.2, round, 19 months');
     assert.equal(moment([2016,0,1]).add(1.1, 'quarters').format('YYYY-MM-DD'), '2016-04-01', 'add 1.1 quarters 1.1*3=3.3, round, 3 months');
 });
+
+return module.exports;});
