@@ -113,7 +113,8 @@
       "composer,json",
       "ender,json",
       "moment.d.ts",
-      "package.js"
+      "package.js",
+      "runAllTests.js"
     ]
   }
 }
