@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -395,4 +395,4 @@ test('endOf millisecond and no-arg', function (assert) {
     assert.equal(+m, +m.clone().endOf('milliseconds'), 'endOf with milliseconds argument should change time');
 });
 
-return module.exports;});
+require = requireOrig;});

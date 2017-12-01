@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -177,4 +177,4 @@ test('is before invalid', function (assert) {
     assert.equal(m.isBefore(invalid, 'milliseconds'), false, 'invalid moment milliseconds');
 });
 
-return module.exports;});
+require = requireOrig;});

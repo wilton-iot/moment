@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 // These tests are for locale independent features
 // locale dependent tests would be in locale test folder
 var test = require("tape-compat");var module = test.QUnit.module;
@@ -57,4 +57,4 @@ test('extending calendar options', function (assert) {
     }
 });
 
-return module.exports;});
+require = requireOrig;});

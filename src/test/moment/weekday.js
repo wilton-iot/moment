@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -151,4 +151,4 @@ test('weekday first day of week Saturday (dow 6)', function (assert) {
     assert.equal(moment([2000, 0,  7]).weekday(), 6, 'Jan  7 2000 is Friday    -- 6th day');
 });
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -308,4 +308,4 @@ test('week year setter works', function (assert) {
     assert.equal(moment.utc('2013-w30-4', 'gggg-[w]ww-e', true).weekYear(2015).format('gggg-[w]ww-e'), '2015-w30-4', '2013-w30-4 to 2015');
 });
 
-return module.exports;});
+require = requireOrig;});

@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var each = require("lodash/each");
 var moment = require("moment");
@@ -505,4 +505,4 @@ test('Y token', function (assert) {
     assert.equal(moment('10000-01-01', 'Y-MM-DD', true).format('Y'), '+10000', 'format 10000 with Y');
 });
 
-return module.exports;});
+require = requireOrig;});

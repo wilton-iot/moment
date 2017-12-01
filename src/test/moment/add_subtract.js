@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var expect = test.expect;
 var moment = require("moment");
@@ -371,4 +371,4 @@ test('add decimal values of days and months', function (assert) {
     assert.equal(moment([2016,0,1]).add(1.1, 'quarters').format('YYYY-MM-DD'), '2016-04-01', 'add 1.1 quarters 1.1*3=3.3, round, 3 months');
 });
 
-return module.exports;});
+require = requireOrig;});

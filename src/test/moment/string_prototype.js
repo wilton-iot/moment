@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -16,4 +16,4 @@ test('string prototype overrides call', function (assert) {
     String.prototype.call = prior;
 });
 
-return module.exports;});
+require = requireOrig;});

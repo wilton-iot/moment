@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -484,4 +484,4 @@ test('timezone format', function (assert) {
     assert.equal(moment().utcOffset(-120).format('ZZ'), '-0200', '+120 -> -0200');
 });
 
-return module.exports;});
+require = requireOrig;});

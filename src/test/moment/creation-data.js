@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -34,4 +34,4 @@ test('strict', function (assert) {
     assert.ok(!moment('2015-01-02', 'YYYY-MM-DD').creationData().strict, 'strict is true');
 });
 
-return module.exports;});
+require = requireOrig;});

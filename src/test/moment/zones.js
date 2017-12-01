@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -501,4 +501,4 @@ test('parse zone with a minutes unit abs less than 16 should retain minutes', fu
     assert.equal(o.hour(), 0);
 });
 
-return module.exports;});
+require = requireOrig;});

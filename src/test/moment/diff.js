@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -247,4 +247,4 @@ test('negative zero', function (assert) {
     assert.ok(!isNegative(moment([2012, 0, 1]).diff(moment([2012, 0, 1, 0, 0, 0, 1]), 'seconds')), 'second diff on same second is zero, not -0');
 });
 
-return module.exports;});
+require = requireOrig;});

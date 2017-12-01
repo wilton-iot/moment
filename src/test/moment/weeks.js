@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -224,4 +224,4 @@ test('count years with iso week 53', function (assert) {
     assert.equal(count, 71, 'Should have 71 years in 400-year cycle with iso week 53');
 });
 
-return module.exports;});
+require = requireOrig;});

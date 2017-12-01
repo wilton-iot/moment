@@ -1,4 +1,4 @@
-define(function(){var require = WILTON_requiresync;var module = {exports: {}};var exports = module.exports;
+define(function(localRequire, exports, module) { var requireOrig = require; require = localRequire;
 var test = require("tape-compat");var module = test.QUnit.module;
 var moment = require("moment");
 
@@ -277,4 +277,4 @@ test('0 hour is invalid in strict', function (assert) {
     assert.equal(moment('0:01', 'h:mm').isValid(), true, '0 hour is valid in normal');
 });
 
-return module.exports;});
+require = requireOrig;});
