@@ -112,6 +112,7 @@
     "wilton": {
         "excludes": [
             "benchmarks",
+            "dist",
             "meteor",
             "min",
             "scripts",
@@ -119,6 +120,8 @@
             "tasks",
             "templates",
             "typing-tests",
+            "ts3.1-typing-tests",
+            "ts3.1-typings",
             "Gruntfile.js",
             "Moment.js.nuspec",
             "bower.json",
